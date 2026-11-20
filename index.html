@@ -35,7 +35,20 @@
       text-decoration: none;
     }
     li a:hover { text-decoration: underline; }
-    .empty { color: #999; }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #999;
+      margin: 40px 0 4px;
+    }
+    li a span {
+      float: right;
+      color: #999;
+      font-size: 14px;
+      line-height: 26px;
+    }
   </style>
 </head>
 <body>
@@ -48,17 +61,24 @@
 
       <li><a href="https://example.com">Name of website</a></li>
     -->
-    <ul id="sites">
+    <h2>Games</h2>
+    <ul>
+      <li><a href="https://www.roblox.com/games/135150489355284/BEAT-DUELS">BEAT DUELS <span>Roblox</span></a></li>
+      <li><a href="https://itch.io/profile/janer567">janer567 <span>itch.io</span></a></li>
+      <li><a href="https://ms-paint-battle.netlify.app/">MS Paint Battle <span>Web game</span></a></li>
     </ul>
 
-    <p class="empty" id="empty">Nothing here yet.</p>
-  </main>
+    <h2>Music</h2>
+    <ul>
+      <li><a href="https://soundcloud.com/janer567">janer567 <span>SoundCloud</span></a></li>
+      <li><a href="https://soundcloud.com/kisanime">kisanime <span>SoundCloud</span></a></li>
+    </ul>
 
-  <script>
-    // Hides the "Nothing here yet." text once at least one website is listed.
-    if (document.querySelectorAll('#sites li').length > 0) {
-      document.getElementById('empty').style.display = 'none';
-    }
-  </script>
+    <h2>Instagram</h2>
+    <ul>
+      <li><a href="https://www.instagram.com/janerr567/">janerr567 <span>Instagram</span></a></li>
+      <li><a href="https://www.instagram.com/kissanimebruh/">kissanimebruh <span>Instagram</span></a></li>
+    </ul>
+  </main>
 </body>
 </html>
