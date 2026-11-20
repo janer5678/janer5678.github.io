@@ -20,6 +20,10 @@
     h1 {
       font-size: 28px;
       margin: 0 0 32px;
+      display: inline-block;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
     }
     ul {
       list-style: none;
@@ -53,7 +57,7 @@
 </head>
 <body>
   <main>
-    <h1>My Websites</h1>
+    <h1 id="title">janer567</h1>
 
     <!--
       TO ADD A WEBSITE: copy the line below, paste it between <ul> and </ul>,
@@ -80,5 +84,19 @@
       <li><a href="https://www.instagram.com/kissanimebruh/">kissanimebruh <span>Instagram</span></a></li>
     </ul>
   </main>
+
+  <script>
+    // Secret: click the title 8 times in a row (no pause longer than 2 seconds).
+    var clicks = 0, last = 0;
+    document.getElementById('title').addEventListener('click', function () {
+      var now = Date.now();
+      clicks = (now - last > 2000) ? 1 : clicks + 1;
+      last = now;
+      if (clicks >= 8) {
+        clicks = 0;
+        location.href = 'https://wizard-story-planner.wizard-game-plans.workers.dev/';
+      }
+    });
+  </script>
 </body>
 </html>
