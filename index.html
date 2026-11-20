@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Websites</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    }
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 32px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li a {
+      display: block;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      color: #111;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    li a:hover { text-decoration: underline; }
+    .empty { color: #999; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My Websites</h1>
+
+    <!--
+      TO ADD A WEBSITE: copy the line below, paste it between <ul> and </ul>,
+      and change the link and the name.
+
+      <li><a href="https://example.com">Name of website</a></li>
+    -->
+    <ul id="sites">
+    </ul>
+
+    <p class="empty" id="empty">Nothing here yet.</p>
+  </main>
+
+  <script>
+    // Hides the "Nothing here yet." text once at least one website is listed.
+    if (document.querySelectorAll('#sites li').length > 0) {
+      document.getElementById('empty').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
